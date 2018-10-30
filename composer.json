@@ -1,0 +1,23 @@
+{
+    "name": "makssiis/zstu-rozklad-php-client",
+    "authors": [
+        {
+            "name": "Tetiana Blindaruk",
+            "email": "t.blindaruk@gmail.com"
+        },
+        {
+            "name": "Maxim Novik",
+            "email": "novik.kor@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZSTU\\RozkladClient\\": "src"
+        }
+    }
+}
