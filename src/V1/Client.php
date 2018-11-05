@@ -34,4 +34,12 @@ class Client
     {
         return new Teacher\Client($this->httpClient);
     }
+
+    /**
+     * @return Room\Client
+     */
+    public function room(): Room\Client
+    {
+        return new Room\Client($this->httpClient);
+    }
 }
