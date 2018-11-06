@@ -1,29 +1,29 @@
 <?php
 declare(strict_types = 1);
 
-namespace ZSTU\RozkladClient\V1\Room\ResponseData;
+namespace ZSTU\RozkladClient\V1\ResponseData\Activity;
 
 use Illuminate\Support\Collection;
 
 /**
- * Class TeacherCollection
+ * Class ActivityCollection
  *
- * @method RoomData[] all()
+ * @method ActivityData[] all()
  *
- * @package ZSTU\RozkladClient\V1\Teacher\ResponseData
+ * @package ZSTU\RozkladClient\V1\ResponseData\Activity
  */
-class RoomCollection extends Collection
+class ActivityCollection extends Collection
 {
     /**
      * @param array $items
      *
-     * @return $this|Collection|RoomData[]
+     * @return $this|Collection|ActivityData[]
      */
     public static function make($items = [])
     {
         if (\is_array($items)) {
             $items = array_map(function ($item) {
-                return new RoomData($item);
+                return new ActivityData($item);
             }, $items);
         }
 

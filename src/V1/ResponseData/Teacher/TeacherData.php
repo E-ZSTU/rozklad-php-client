@@ -1,14 +1,14 @@
 <?php
 declare(strict_types = 1);
 
-namespace ZSTU\RozkladClient\V1\Room\ResponseData;
+namespace ZSTU\RozkladClient\V1\ResponseData\Teacher;
 
 /**
- * Class RoomData
+ * Class TeacherData
  *
- * @package ZSTU\RozkladClient\V1\Room\ResponseData
+ * @package ZSTU\RozkladClient\V1\ResponseData\Teacher
  */
-class RoomData
+class TeacherData
 {
     /**
      * @var int
@@ -18,7 +18,7 @@ class RoomData
     /**
      * @var string
      */
-    private $room_name;
+    private $teacher_name;
 
     /**
      * TeacherData constructor.
@@ -28,7 +28,7 @@ class RoomData
     public function __construct(array $data)
     {
         $this->id = (int) $data['id'];
-        $this->room_name = (string) $data['room_name'];
+        $this->teacher_name = (string) $data['teacher_name'];
     }
 
     /**
@@ -42,8 +42,8 @@ class RoomData
     /**
      * @return string
      */
-    public function getRoomName(): string
+    public function getTeacherName(): string
     {
-        return $this->room_name;
+        return $this->teacher_name;
     }
 }

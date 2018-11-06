@@ -5,7 +5,7 @@ namespace ZSTU\RozkladClient\V1\Room;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\RequestOptions;
-use ZSTU\RozkladClient\V1\Room\ResponseData\SearchResponseData;
+use ZSTU\RozkladClient\V1\ResponseData\Room\RoomSearchResponseData;
 
 /**
  * Class Client
@@ -32,15 +32,15 @@ class Client
     /**
      * @param string $name
      *
-     * @return SearchResponseData
+     * @return RoomSearchResponseData
      */
-    public function search(string $name): SearchResponseData
+    public function search(string $name): RoomSearchResponseData
     {
         $response = $this->httpClient->request('GET', '/room-search', [
             RequestOptions::QUERY => ['name' => $name],
         ]);
         $jsonResponse = json_decode($response->getBody()->getContents(), true);
 
-        return new SearchResponseData($jsonResponse);
+        return new RoomSearchResponseData($jsonResponse);
     }
 }

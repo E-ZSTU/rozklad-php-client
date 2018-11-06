@@ -1,14 +1,17 @@
 <?php
 declare(strict_types = 1);
 
-namespace ZSTU\RozkladClient\V1\Teacher\ResponseData;
+namespace ZSTU\RozkladClient\V1\ResponseData\Teacher;
+
+use ZSTU\RozkladClient\V1\ResponseData\Activity\ActivityCollection;
+use ZSTU\RozkladClient\V1\ResponseData\Activity\ActivityData;
 
 /**
- * Class ScheduleResponseData
+ * Class TeacherScheduleResponseData
  *
- * @package ZSTU\RozkladClient\V1\Teacher\ResponseData
+ * @package ZSTU\RozkladClient\V1\ResponseData\Teacher
  */
-class ScheduleResponseData
+class TeacherScheduleResponseData
 {
     /**
      * @var int
