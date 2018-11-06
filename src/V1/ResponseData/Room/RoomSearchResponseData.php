@@ -1,14 +1,14 @@
 <?php
 declare(strict_types = 1);
 
-namespace ZSTU\RozkladClient\V1\Room\ResponseData;
+namespace ZSTU\RozkladClient\V1\ResponseData\Room;
 
 /**
- * Class SearchResponseData
+ * Class RoomSearchResponseData
  *
- * @package ZSTU\RozkladClient\V1\Room\ResponseData
+ * @package ZSTU\RozkladClient\V1\ResponseData\Room
  */
-class SearchResponseData
+class RoomSearchResponseData
 {
     /**
      * @var null|RoomData
