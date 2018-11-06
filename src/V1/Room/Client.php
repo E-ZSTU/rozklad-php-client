@@ -5,6 +5,7 @@ namespace ZSTU\RozkladClient\V1\Room;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\RequestOptions;
+use ZSTU\RozkladClient\V1\ResponseData\Room\RoomScheduleResponseData;
 use ZSTU\RozkladClient\V1\ResponseData\Room\RoomSearchResponseData;
 
 /**
@@ -42,5 +43,19 @@ class Client
         $jsonResponse = json_decode($response->getBody()->getContents(), true);
 
         return new RoomSearchResponseData($jsonResponse);
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return RoomScheduleResponseData
+     */
+    public function schedule(int $id): RoomScheduleResponseData
+    {
+        $response = $this->httpClient->request('GET', "/room-schedule/$id");
+
+        $jsonResponse = json_decode($response->getBody()->getContents(), true);
+
+        return new RoomScheduleResponseData($jsonResponse);
     }
 }
